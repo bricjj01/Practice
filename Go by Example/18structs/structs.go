@@ -34,8 +34,12 @@ func main() {
 	// pointers are automatically dereferenced.
 	sp := &s
 	fmt.Println(sp.age)
+	// the pointer is just the memory address of s, changing
+	// the value stored at that address changes s
+	fmt.Println(s.age)
 
 	// Structs are mutable.
 	sp.age = 51
 	fmt.Println(sp.age)
+	fmt.Println(s.age)
 }
